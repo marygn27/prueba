@@ -1,0 +1,213 @@
+#1) Escribir una clase llamada Rectángulo que contenga una base y una altura, y que contenga un método que devuelva el área
+#del rectángulo.
+
+
+class rectangulo:
+
+
+def__init__(self, Base, Altura):
+    self.Base=Base
+    self.Altura=Altura
+
+def Area(self)
+    return self.Base*self.Altura
+
+Rectangulo1=rectangulo(10,10)
+print(Rectangulo1.Area())
+
+#2) Modelar una clase Mate que describa el funcionamiento de la conocida bebida tradicional argentina. La clase debe contener
+#como miembros:
+#- Un atributo para la cantidad de cebadas restantes hasta que se lava el mate (representada por un número).
+#-Un atributo para el estado (lleno o vacío).
+#- Un atributo n, que indica la cantidad máxima de cebadas.
+#-Un método cebar, que llena el mate con agua. Si se intenta cebar con el mate lleno, se debe lanzar una
+#excepción que imprima el mensaje ¡Cuidado! ¡Te quemaste!
+#- Un método beber, que vacía el mate y le resta una cebada disponible. Si se intenta beber un mate vacío, se
+#debe lanzar una excepción que imprima el mensaje: ¡El mate está vacío!
+#- Es posible seguir cebando y bebiendo el mate aunque no haya cebadas disponibles. En ese caso la cantidad
+#de cebadas restantes se mantendrá en 0, y cada vez que se intente beber se debe imprimir un mensaje de aviso:
+#“Advertencia: el mate está lavado.” pero no se debe lanzar una excepción.
+
+"""classMate:def__init__(self, CantidadMaxima=10, Estado=False):
+    self.CantidadMaxima==CantidadMaxima
+    self.CantidadRestante=CantidadMaxima
+
+def Cebar(self):
+    if self.Estado==True:
+        print("Te quemaste")
+    Else:
+        self.Estado=True
+    
+def Beber(self):
+    if self.Estado==False:
+        print("El mate esta vacío")
+    else:
+        if self.CantidadRestante==0:
+            print("Advertencia: el mate está lavado")
+            self.Estado=false
+        else:
+            self.CantidadRetsante-=1
+            self.Estado=False"""
+
+"""Botella y Sacacorchos
+-Escribir una clase Corcho, que contenga un atributo bodega (cadena con el nombre de la bodega).
+-Escribir una clase Botella que contenga un atributo corcho con una referencia al corcho que la tapa, o None si está 
+destapada.
+-Escribir una clase Sacacorchos que tenga un método destapar que le reciba una botella, le saque el corcho y se guarde 
+una referencia al corcho sacado. Debe lanzar una excepción en el caso en que la botella ya esté destapada, o si el 
+sacacorchos ya contiene un corcho.
+-Agregar un método limpiar, que saque el corcho del sacacorchos, o lance una excepción en el caso en el que no haya 
+un corcho."""
+
+
+"""Forma 1"""
+# class Corcho:
+#     def __init__(self, Bodega):
+#         self.Bodega=Bodega
+    
+#     def __str__(self):
+#         return self.Bodega
+
+# class Botella:
+#     def __init__(self, Corcho:Corcho):
+#         self.CorchoDeBotella=Corcho
+
+# class Sacacorcho:
+#     def __init__(self):
+#         self.CorchoSacacorcho=None
+    
+#     def Destapar(self,Botella:Botella):
+#         if self.CorchoSacacorcho==None:
+#             if Botella.CorchoDeBotella!=None:
+#                 self.CorchoSacacorcho=Botella.CorchoDeBotella
+#                 Botella.CorchoDeBotella=None
+#                 print("Botella destapada")
+#             else:
+#                 print("La botella ya esta destapada")
+#         else:
+#             print("El sacacorchos ya tiene un corcho, primero hay que limpiarlo")
+            
+#     def Limpiar(self):
+#         if self.CorchoSacacorcho==None:
+#             print("El sacacorchos ya esta limpio")
+#         else:
+#             self.CorchoSacacorcho=None
+#             print("Sacacorcho limpiado")
+
+"""Forma 2"""
+# class Corcho:
+#     def __init__(self, Bodega):
+#         self.Bodega=Bodega
+    
+#     def __str__(self):
+#         return self.Bodega
+
+# class Botella:
+#     def __init__(self, Corcho:Corcho):
+#         self.CorchoDeBotella=Corcho
+    
+#     def PerderCorcho(self):
+#         temporal=self.CorchoDeBotella
+#         self.CorchoDeBotella=None
+#         return temporal
+
+# class Sacacorcho:
+#     def __init__(self):
+#         self.CorchoSacacorcho=None
+    
+#     def Destapar(self,Botella:Botella):
+#         if self.CorchoSacacorcho==None:
+#             if Botella.CorchoDeBotella!=None:
+#                 self.CorchoSacacorcho=Botella.PerderCorcho()
+#                 print("Botella destapada")
+#             else:
+#                 print("La botella ya esta destapada")
+#         else:
+#             print("El sacacorchos ya tiene un corcho, primero hay que limpiarlo")
+
+#     def Limpiar(self):
+#         if self.CorchoSacacorcho==None:
+#             print("El sacacorchos ya esta limpio")
+#         else:
+#             self.CorchoSacacorcho=None
+#             print("Sacacorcho limpiado")
+
+"""4) Una heladería es un tipo especial de restaurante. Cree una clase Restaurante, cuyo método __init__() guarde dos atributos:
+restaurante_nombre y tipo_comida. Cree un método describir_restaurante() que muestre estas piezas de información, y un
+método abrir_restaurante() que muestre un mensaje indicando que el restaurante ahora está abierto. Luego cree una clase
+Heladeria que herede de Restaurante, y agregue a los existentes un atributo llamado sabores que almacene una lista de los
+sabores de helado disponibles. Escriba también un método que muestre estos valores, cree una instancia de la clase y llame
+al método. """
+
+"""class Restaurante:
+    def __init__(self, restaurante_nombre, tipo_comida):
+        self.restaurante_nombre = restaurante_nombre
+        self.tipo_comida = tipo_comida
+    
+    def describir_restaurante(self):
+        print(f"El restaurante {self.restaurante_nombre} sirve comida {self.tipo_comida}.")
+
+    
+    def abrir_restaurante(self):
+        print(f"El restaurante {self.restaurante_nombre} ahora está abierto.")"""
+
+
+"""class Heladeria(Restaurante):
+    def __init__(self, restaurante_nombre, tipo_comida, sabores):
+        super().__init__(restaurante_nombre, tipo_comida)
+        self.sabores = sabores
+    
+    def mostrar_sabores(self):
+        print("Los sabores de helado disponibles son:")
+        for sabor in self.sabores:
+            print(f"- {sabor}")
+
+
+mi_heladeria = Heladeria("La mejor heladería", "helados", ["vainilla", "chocolate", "fresa"])
+mi_heladeria.describir_restaurante()
+mi_heladeria.abrir_restaurante()
+mi_heladeria.mostrar_sabores()"""
+
+"""5) Escribir una clase Personaje que contenga los atributos vida, posicion y velocidad, y los métodos recibir_ataque, que
+reduzca la vida según una cantidad recibida y lance una excepción si la vida pasa a ser menor o igual que cero, y mover
+que reciba una dirección y se mueva en esa dirección la cantidad indicada por velocidad.
+ Escribir una clase Soldado que herede de Personaje, y agregue el atributo ataque y el método atacar, que reciba otro
+personaje, al que le debe hacer el daño indicado por el atributo ataque.
+ Escribir una clase Campesino que herede de Personaje, y agregue el atributo cosecha y el método cosechar, que
+devuelva la cantidad cosechada"""
+
+"""class Personaje:
+    def __init__(self, vida, posicion, velocidad):
+        self.vida = vida
+        self.posicion = posicion
+        self.velocidad = velocidad
+        
+    def recibir_ataque(self, cantidad):
+        self.vida -= cantidad
+        if self.vida <= 0:
+            raise Exception("El personaje ha muerto")
+        
+    def mover(self, direccion):
+        x, y = direccion
+        self.posicion = (self.posicion[0] + x * self.velocidad, 
+                         self.posicion[1] + y * self.velocidad)
+
+class Soldado(Personaje):
+    def __init__(self, vida, posicion, velocidad, ataque):
+        super().__init__(vida, posicion, velocidad)
+        self.ataque = ataque
+        
+    def atacar(self, otro_personaje):
+        otro_personaje.recibir_ataque(self.ataque)
+
+class Campesino(Personaje):
+    def __init__(self, vida, posicion, velocidad, cosecha):
+        super().__init__(vida, posicion, velocidad)
+        self.cosecha = cosecha
+        
+    def cosechar(self):
+        return self.cosecha"""
+
+
+
+    

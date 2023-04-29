@@ -1,0 +1,44 @@
+#Crear una clase gato que contenga 5 atributos (Nombre, Color de pelo, color de
+#ojos, cansancio y hambre) y 4 métodos (Comer, Dormir, Jugar, Acariciar). Luego
+#instanciar 3 objetos de la clase gato con distintos atributos y utilizar sus
+#Metodos.
+
+class Gato:
+    Nombre=""
+    colorpelo=""
+    colorojos=""
+    energia=0
+    hambre=0
+
+    def_init_(self,nombre,colorpelo,colorojos,energia,hambre):
+    self.Nombre=Nombre
+    self.ColorPelo=colorPelo
+    self.ColorOjos=colorOjos
+    self.Energia=energia
+    self.Hambre=hambre
+
+def Comer(self):
+    self.Hambre-=1
+    print(f"{self.Nombre}Comio")
+
+def Dormir(self):
+    self.Energia+=1
+    print(f"{self.Nombre}Esta dormido")
+
+def jugar(self):
+    if self.Energia>0 and self.Hambre<10:
+    self.Energia-=1
+    self.Hambre+=1
+
+def Acariciar(self):
+    self.Dormir()
+    print(miau)
+
+gato1=Gato("michi","negro,"negro",10,10)
+gato1.Comer()
+gato|.Dormir()
+Print(f"Energia={gato1.__Energia}")
+
+
+
+

@@ -1,0 +1,85 @@
+
+#1)Escriba una función que muestre todos los números primos entre 1 
+#y un número n que es ingresado por parámetro
+def primos(n):
+    lista_primos = [] 
+    for num in range(2, n+1): 
+        for i in range(2, num): 
+            if (num % i) == 0: 
+                break 
+        else: 
+            lista_primos.append(num) 
+    print(lista_primos)
+
+"""Escriba una función que le pida al usuario ingresar condimentos 
+para un sándwich,hasta que el usuario ingrese ‘salir’. Cada vez 
+que se ingrese un condimento, muestre un mensaje
+avisando que ya se agregó el condimento al sándwich. Escriba
+versiones diferentes del programa de acuerdo a estos criterios:
+• Use un test condicional en el ciclo while para detener la ejecución.
+• Use un test condicional dentro del ciclo para decidir si continuar 
+la ejecución.""" 
+
+"""def armar_sandwich():
+    condimento = ""
+    while condimento != "salir":
+        condimento = input("Ingrese un condimento para su sándwich (o escriba 'salir' para terminar): ")
+        if condimento != "salir":
+            print(f"Se ha agregado {condimento} al sándwich.")"""
+
+"""def armar_sandwich():
+    condimento = input("Ingrese un condimento para su sándwich (o escriba 'salir' para terminar): ")
+    while True:
+        if condimento == "salir":
+            break
+        print(f"Se ha agregado {condimento} al sándwich.")
+        condimento = input("Ingrese otro condimento para su sándwich (o escriba
+          'salir' para terminar): ")"""
+
+"""A) Remera: Escriba una función “hacer_remera()” que tome como parámetros un
+tamaño  y el mensaje que debería ir impreso en la remera. La función debe mostrar 
+un mensajedescribiendo el tamaño de la remera y el mensaje impreso en ella. Llame 
+la función una vez usando argumentos por posición. Llámela una segunda vez usando
+ argumentos por clave.
+B) Remeras Grandes: Modifique la “funcion hacer_remera()” para que el tamaño por
+defecto sea ‘L’ y el mensaje, ‘Me gusta Python’. Haga un par de remeras, la primera
+ con los valores por defecto, y la segunda con valores diferentes."""
+
+"""def hacer_remera(tamaño, mensaje):
+    print(f"La remera es de tamaño {tamaño} y tiene impreso el mensaje '{mensaje}'.")
+
+# Llamado usando argumentos por posición
+hacer_remera('M', 'Hoy es un gran día!')
+
+# Llamado usando argumentos por clave
+hacer_remera(mensaje='Amo programar en Python', tamano='XL') """
+
+"""def hacer_remera(tamaño='L', mensaje='Me gusta Python'):
+    print(f"La remera es de tamaño {tamaño} y tiene impreso el mensaje '{mensaje}'.")
+"""
+"""#b)
+# Creando una remera con valores por defecto
+hacer_remera()
+
+# Creando una remera con valores diferentes
+hacer_remera(tamano='S', mensaje='¡Python es lo mejor!')"""
+
+"""4) Serie de Fibonacci: Escriba una función fibonacci(n) que devuelva los n 
+primeros numeros de la serie de Fibonacci. En esta serie, los primeros dos números 
+son 0 y 1,y cada sucesivo número es la suma de los dos números inmediatamente 
+anteriores (ejemplo: 0,1,1,2,3,5,8, …)."""
+
+"""def fibonacci(n):
+    a, b = 0, 1
+    fib_lista = []
+    fib_lista.append(a)
+    fib_lista.append(b)
+    for i in range(2, n):
+        c = a + b
+        fib_lista.append(c)
+        a = b
+        b = c
+        return fib_lista"""
+
+
+
